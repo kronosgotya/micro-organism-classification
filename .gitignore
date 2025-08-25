@@ -10,13 +10,10 @@ __pycache__/
 .idea/
 
 # Datos y modelos (no versionar pesados)
-data/
-datasets/
-models/
 outputs/
 runs/
+data/
 checkpoints/
-*.pt
 *.pth
 *.ckpt
 
