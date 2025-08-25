@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "Micro-Organism Classifier API",
+    "_postman_id": "6b9d7f4f-8f1c-4a7c-92c8-aaaa0000bbbb",
+    "description": "Colección para probar la API FastAPI (health, labels, predict, predict-json).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://127.0.0.1:8000" }
+  ],
+  "item": [
+    {
+      "name": "GET /health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "GET /labels",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/labels"
+      }
+    },
+    {
+      "name": "POST /predict (multipart)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Accept", "value": "application/json" }],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "<SELECCIONA_UNA_IMAGEN_AL_IMPORTAR>"
+            }
+          ]
+        },
+        "url": "{{baseUrl}}/predict?tta=false&topk=5"
+      }
+    },
+    {
+      "name": "POST /predict-json (base64)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"image_base64\": \"<PEGA_AQUI_BASE64>\",\n  \"tta\": false,\n  \"topk\": 5\n}"
+        },
+        "url": "{{baseUrl}}/predict-json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+services:
+  imgcls:
+    build: .
+    container_name: imgcls
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ./:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: ["gpu"]
+    shm_size: "2g"
+    environment:
+      - DATA_ROOT=/workspace/data/Micro_Organism
+    restart: unless-stopped

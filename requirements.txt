@@ -1,0 +1,8 @@
+numpy<2
+jupyterlab
+torchvision==0.17.1
+torchmetrics
+timm
+albumentations
+scikit-learn
+matplotlib

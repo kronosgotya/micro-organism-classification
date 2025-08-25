@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Data / models (do not include them in the image)
+data/
+datasets/
+models/
+outputs/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Python / Jupyter temporals
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# SO
+.DS_Store
+Thumbs.db

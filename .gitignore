@@ -1,0 +1,25 @@
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Entornos / configs locales
+.env
+.venv/
+.vscode/
+.idea/
+
+# Datos y modelos (no versionar pesados)
+data/
+datasets/
+models/
+outputs/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# SO
+.DS_Store
+Thumbs.db
