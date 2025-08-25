@@ -13,6 +13,7 @@
 ---
 
 ##  Dataset
+
 The dataset has been taken from Kaggle (see link below):
 `https://www.kaggle.com/datasets/mdwaquarazam/microorganism-image-classification/data`
 ---
